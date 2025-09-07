@@ -10,42 +10,43 @@
     <title>Portfolio Website</title>
 </head>
 <body>
-    <header class="sticky top-0 z-50 duration-300">
-        <nav class="relative container flex justify-between items-center">
+    <header id="navbar" class="sticky top-0 z-50 duration-300">
+        <nav class="relative container mx-auto flex justify-between items-center p-3">
             <div class="py-5">
                 <h3 class="text-3xl text-orange-600 w-10">Dalibor</h3>
             </div>
-            <div id="nav-menu">
-                <li>
-                    <a href="#quality_services" class="nav-link">Services</a>
-                </li>
-                <li>
-                    <a href="#recent_works" class="nav-link">Works</a>
-                </li>
-                <li>
-                    <a href="#exp_edu" class="nav-link">Resume</a>
-                </li>
-                <li>
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-                <li>
-                    <button>
-                        <span>Hire Me!</span>
-                    </button>
-                </li>
+            <div id="nav-menu" class="hidden absolute top-0 left-0 bg-primaryColor w-full py-24 lg:block lg:bg-transparent lg:static lg:py-0 lg:border-none lg:w-auto lg:ml-auto">
+                <ul class="flex flex-col items-center text-center gap-8 text-gray-900 dark:text-textColor lg:flex-row lg:gap-5 lg:text-gray-900">
+                    <li>
+                        <a href="#quality_services" class="nav-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#recent_works" class="nav-link">Works</a>
+                    </li>
+                    <li>
+                        <a href="#exp_edu" class="nav-link">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                    <li>
+                        <button class="btn ml-10">
+                            <span class="z-10">Hire Me!</span>
+                        </button>
+                    </li>
+                </ul>
+                <div id="nav-close" class="absolute top-6 right-4 text-whiteColor text-3xl cursor-pointer md:right-8 lg:hidden">
+                    <i class="ri-close-line"></i>
+                </div>
             </div>
-            <div id="nav-close">
-                <i class="ri-close-line"></i>
-            </div>
+            <div class="flex items-center gap-5">
+                <i class="ri-moon-line cursor-pointer ml-4 text-2xl" id="theme-toggle"></i>
 
-            <div>
-                <i class="ri-moon-line" id="theme-toggle"></i>
-
-                <div id="hamburger">
-                    <i class="ri-menu-2-line"></i>
+                <div id="hamburger" class="lg:hidden">
+                    <i class="ri-menu-2-line cursor-pointer ml-4 text-2xl"></i>
                 </div>
             </div>
         </nav>
