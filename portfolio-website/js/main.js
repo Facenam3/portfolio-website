@@ -44,3 +44,4 @@ function lightMode() {
     themeBtn.classList.replace("ri-sun-line", "ri-moon-line");
     localStorage.setItem("mode", "light");
 }
+
