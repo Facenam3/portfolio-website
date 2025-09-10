@@ -130,7 +130,8 @@
     color: var(--color-whiteColor);
   }
 
-  .title {
+  .title,
+  .subtitle {
     font-size: 2.25rem;      
     line-height: 2.5rem;
     font-weight: 700;         
@@ -147,25 +148,44 @@
   }
 
   @media (min-width: 1024px) { 
-    .title {
+    .title,
+    .subtitle {
       font-size: 3.75rem;  
       line-height: 1;
     }
   }
 
   @media (min-width: 1280px) { 
-    .title {
+    .title,
+    .subtitle {
       font-size: 65px;     
       line-height: 1;
     }
   }
 
-  html.dark .title {
+  html.dark .title,
+  .subtitle {
     background-image: linear-gradient(
       to right,
       var(--color-primaryColorLight),
       var(--color-whiteColor)
     );
+  }
+
+  .subtitle {
+    font-size: 1.875rem; 
+  }
+
+  @media (min-width: 768px) { 
+    .subtitle {
+      font-size: 2.25rem; 
+    }
+  }
+
+  @media (min-width: 1024px) { 
+    .subtitle {
+      font-size: 3rem; 
+    }
   }
 }
 
@@ -221,4 +241,55 @@
     animation: move 3s linear infinite;
   }
 
+  .service_item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem; 
+    padding: 2rem 1rem; 
+    border-bottom: 1px solid var(--color-primaryColor);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .service_item:hover {
+    background-color: var(--color-primaryColorLight);
+  }
+
+  .service_item div p {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .service_item:hover div p {
+    color: var(--color-whiteColor);
+  }
+
+  .service_item div i {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .service_item:hover div i {
+    color: var(--color-whiteColor);
+    transform: rotate(-90deg);
+  }
+
+  .indicator {
+    transition: left 0.4s;
+  }
+
+  .work_card > div {
+    @apply duration-500;
+  }
+
+  .work_card:hover > div {
+    @apply bottom-0
+  }
+
+  .work_card div i {
+    @apply duration-300 delay-300;
+  }
+
+  .work_card:hover div i {
+    @apply -rotate-90;
+  }
 }
