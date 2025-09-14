@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-sectionColor: hsl(0, 0%, 97%);
+  --color-sectionColor: hsl(209, 80%, 96%);
   --color-darkBodyColor: hsl(216, 100%, 4%);
   --color-darkSectionColor: hsl(211, 100%, 12%);
   --color-primaryColor: hsl(209, 87%, 21%);
@@ -31,6 +31,18 @@
   html.dark body {
     background-color: var(--color-darkBodyColor);
     color: var(--color-textColor);
+  }
+
+  input,
+  textarea {
+    @apply w-full dark:bg-darkBodyColor border border-gray-800 px-4 py-3 rounded-lg;
+  }
+
+  input:focus,
+  input:active,
+  textarea:focus,
+  textarea:active  {
+    @apply outline-none border-primaryColorLight;
   }
 }
 
@@ -309,5 +321,26 @@
 
   .skills_card:hover img {
     @apply scale-110;
+  }
+
+  .blog_card img {
+    @apply w-full duration-300;
+  }
+
+  .blog_card:hover img {
+    @apply scale-110;
+  }
+  
+  .blog_card div,
+  .blog_card .blog_card_info p {
+    @apply duration-300;
+  }
+
+  .blog_card:hover .blog_card_info {
+    @apply bg-primaryColorLight text-whiteColor;
+  }
+
+  .blog_card:hover .blog_card_info p {
+    @apply text-whiteColor;
   }
 }
