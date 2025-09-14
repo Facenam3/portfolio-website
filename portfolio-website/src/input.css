@@ -302,4 +302,12 @@
   .exp_edu_card:hover > p {
     @apply text-whiteColor;
   }
+
+  .skilss_card img {
+    @apply duration-300;
+  }
+
+  .skills_card:hover img {
+    @apply scale-110;
+  }
 }
