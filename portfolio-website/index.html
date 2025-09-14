@@ -13,7 +13,7 @@
     <header id="navbar" class="sticky top-0 z-50 duration-300">
         <nav class="relative container mx-auto flex justify-between items-center p-3">
             <div class="py-5">
-                <img src="/portfolio-website/images/skilss/D.svg" alt="logo" class="max-w-16">
+                <img src="/portfolio-website/images/skilss/D.svg" alt="logo" id="logo" class="max-w-16">
             </div>
             <div id="nav-menu" class="hidden absolute top-0 left-0 bg-primaryColor w-full py-24 lg:block lg:bg-transparent lg:static lg:py-0 lg:border-none lg:w-auto lg:ml-auto">
                 <ul class="flex flex-col items-center text-center gap-8 text-gray-900 dark:text-textColor lg:flex-row lg:gap-5 lg:text-gray-900">
@@ -21,13 +21,16 @@
                         <a href="#quality_services" class="nav-link">Services</a>
                     </li>
                     <li>
-                        <a href="#recent_projects" class="nav-link">Projects</a>
+                        <a href="#works" class="nav-link">Works</a>
                     </li>
                     <li>
                         <a href="#exp_edu" class="nav-link">Resume</a>
                     </li>
                     <li>
                         <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#recent-projects" class="nav-link">Projects</a>
                     </li>
                     <li>
                         <a href="#contact" class="nav-link">Contact</a>
@@ -63,7 +66,7 @@
                 </div>
 
                 <div class="flex flex-col md:flex-row gap-5 align-center">                 
-                    <div class="space-y-3 md:w-1/2 pt-10 md:pt-16 lg:mt-14">
+                    <div class="hero__content space-y-3 md:w-1/2 pt-10 md:pt-16 lg:mt-14">
                         <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold">I am Dalibor</h3>
                         <h1>
                             <span class="title">Full Stack Developer</span>
@@ -105,8 +108,10 @@
                         </div>
                     </div>
 
-                    <div class="relative hidden md:w-1/2 md:flex justify-center">
-                            <div class="absolute left-0 bottom-0 w-80 bg-primaryColor mix-blend-screen rounded-full blur-[150px] opacity-50"></div>
+                    <div class="hero__image relative hidden md:w-1/2 md:flex justify-center">
+                            <div class="absolute top-1/4 left-1/2 transform -translate-x-1/2 
+                            -translate-y-1/2 w-140 h-140 bg-primaryColorLight mix-blend-screen
+                            rounded-full blur-[150px] opacity-50"></div>
 
                             <img 
                                 src="./images/Dalibor.jpg" 
@@ -116,7 +121,7 @@
                                 />
                     </div>
                 </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-10">
+                    <div class="hero__footer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-10">
                         <div class="flex items-center gap-3">
                             <p class="text-5xl lg:text-6xl font-bold">5+</p>
                             <p>
@@ -152,7 +157,7 @@
 
         <section id="quality_services" class="bg-sectionColor dark:bg-darkSectionColor p-10">
             <div class="container mx-auto">
-                <div class="flex flex-col items-center gap-5 text-center mt-3">
+                <div class="service__top flex flex-col items-center gap-5 text-center mt-3">
                     <h2 class="subtitle">My Quality Services</h2>
                     <p class="max-w-2xl">
                         We transform your ideas and desires into a distinctive web project 
@@ -224,16 +229,16 @@
             </div>         
         </section>
 
-        <section id="recent_projects" class="container mx-auto p-10">
-            <div class="flex flex-col items-center gap-5 text-center mt-3">
-                    <h2 class="subtitle">My Recent Projects</h2>
+        <section id="works" class="container mx-auto p-10">
+            <div class="recent_works_top flex flex-col items-center gap-5 text-center mt-3">
+                    <h2 class="subtitle">My Recent Work</h2>
                     <p class="max-w-2xl">
                         We transform your ideas and desires into a distinctive web project 
                         that inspires both you and your customers.
                     </p>
             </div>
 
-            <div class="relative w-max mx-auto my-10 h-10 text-xs grid grid-cols-4 items-center px-[3px] rounded-full
+            <div class="recent_works_tabs relative w-max mx-auto my-10 h-10 text-xs grid grid-cols-4 items-center px-[3px] rounded-full
                         bg-sectionColor dark:bg-darkSectionColor border border-primaryColor overflow-hidden transition md:h-12 md:text-base">
                 <div class="indicator absolute h-9 my-auto top-0 bottom-0 left-0 rounded-full bg-primaryColorLight md:h-11"></div>
 
@@ -254,7 +259,6 @@
                 "></div>
 
                 <ul class="grid grid-col-1 gap-5 lg:gap-10 md:grid-cols-2">
-                    <!-- HTML/ CSS / JavaScript -->
                     <li class="work_card frontend relative bg-sectionColor dark:bg-darkSectionColor p-5 rounded-2xl
                              border border-transparent hover:border-primaryColor duration-300 overflow-hidden lg:p-8">
                         <img src="./images/projects/project1.png" alt="recent works"  class="w-full h-60 md:h-76 lg:h-100 object-cover rounded-lg">
@@ -398,14 +402,14 @@
         <section id="exp_edu" class="bg-sectionColor dark:bg-darkSectionColor p-10">
             <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
-                    <div class="flex items-center gap-3">
+                    <div class="edu__top flex items-center gap-3">
                         <div class="text-2xl text-primaryColorLight md:text-3xl lg:text-4xl">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <h2 class="subtitle">Education</h2>
                     </div>
                     <div class="my-10 space-y-5 md:space-y-10">
-                        <div class="exp_card exp_edu_card bg-whiteColor dark:bg-darkBodyColor  p-5 rounded-2xl
+                        <div class="edu_card exp_edu_card bg-whiteColor dark:bg-darkBodyColor  p-5 rounded-2xl
                             hover:bg-primaryColor dark:hover:bg-primaryColorLight duration-300 ">
                             <p class="text-primaryColorLight text-sm font-bold pb-3">2014 - 2019</p>
                             <p class="text-xl font-bold uppdercase lg:text-2xl xl:text-3xl"> Geography and Tourism</p>
@@ -413,7 +417,7 @@
                         </div>
                     </div>
                     <div class="my-10 space-y-5 md:space-y-10">
-                        <div class="exp_card exp_edu_card bg-whiteColor dark:bg-darkBodyColor  p-5 rounded-2xl
+                        <div class="edu_card exp_edu_card bg-whiteColor dark:bg-darkBodyColor  p-5 rounded-2xl
                             hover:bg-primaryColor dark:hover:bg-primaryColorLight duration-300 ">
                             <p class="text-primaryColorLight text-sm font-bold pb-3">2021 - 2022</p>
                             <p class="text-xl font-bold uppdercase lg:text-2xl xl:text-3xl">C & C++ Programming</p>
@@ -421,7 +425,7 @@
                         </div>
                     </div>
                     <div class="my-10 space-y-5 md:space-y-10">
-                        <div class="exp_card exp_edu_card bg-whiteColor dark:bg-darkBodyColor  p-5 rounded-2xl
+                        <div class="edu_card exp_edu_card bg-whiteColor dark:bg-darkBodyColor  p-5 rounded-2xl
                             hover:bg-primaryColor dark:hover:bg-primaryColorLight duration-300 ">
                             <p class="text-primaryColorLight text-sm font-bold pb-3">2022 - 2023</p>
                             <p class="text-xl font-bold uppdercase lg:text-2xl xl:text-3xl">Full-Stack Web Development</p>
@@ -430,7 +434,7 @@
                     </div>
                     
                     <div class="my-10 space-y-5 md:space-y-10">
-                        <div class="exp_card exp_edu_card bg-whiteColor dark:bg-darkBodyColor  p-5 rounded-2xl
+                        <div class="edu_card exp_edu_card bg-whiteColor dark:bg-darkBodyColor  p-5 rounded-2xl
                             hover:bg-primaryColor dark:hover:bg-primaryColorLight duration-300 ">
                             <p class="text-primaryColorLight text-sm font-bold pb-3">2023 - 2024</p>
                             <p class="text-xl font-bold uppdercase lg:text-2xl xl:text-3xl">Full-Stack Web Developer</p>
@@ -439,7 +443,7 @@
                     </div>
                 </div> 
                  <div>
-                    <div class="flex items-center gap-3">
+                    <div class="exp__top flex items-center gap-3">
                         <div class="text-2xl text-primaryColorLight md:text-3xl lg:text-4xl">
                             <i class="fa-solid fa-medal"></i>
                         </div>
@@ -474,7 +478,7 @@
         </section>
 
         <section id="skills" class="container mx-auto p-10">
-            </div><div class="flex flex-col items-center gap-5 text-center">
+            <div class="skills_top flex flex-col items-center gap-5 text-center">
                 <h2 class="subtitle">My Skills</h2>
                 <p class="max-w-2xl">
                     We transform your ideas and desires into a distinctive web 
@@ -565,9 +569,9 @@
             </div>
         </section>
 
-        <section class="bg-sectionColor dark:bg-darkSectionColor p-10" id="blogs">            
+        <section  id="recent-projects" class="bg-sectionColor dark:bg-darkSectionColor p-10">            
             <div class="container mx-auto">
-                </div><div class="flex flex-col items-center gap-5 text-center">
+                <div class="project_top flex flex-col items-center gap-5 text-center">
                     <h2 class="subtitle">Recent Projects</h2>
                     <p class="max-w-2xl">
                         We transform your ideas and desires into a distinctive web 
@@ -636,7 +640,7 @@
         <section class="container mx-auto p-10" id="contact">
             <div class="flex flex-col md:flex-row-reverse gap-16 md:gap-5 md:items-center">
                 <div class="flex-1 space-y-7 md:space-y-10 lg:pl-20 xl:pl-40">
-                    <div class="flex items-start gap-4 mb-4">
+                    <div class="contact_item flex items-start gap-4 mb-4">
                         <div class="text-whiteColor bg-gradient-to-b from-primaryColor to-primaryColorLight 
                                     h-10 w-10 lg:h-14 lg:w-14 rounded-full grid place-items-center">
                             <i class="fa-solid fa-phone"></i>
@@ -647,7 +651,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 mb-4">
+                    <div class="contact_item flex items-start gap-4 mb-4">
                         <div class="text-whiteColor bg-gradient-to-b from-primaryColor to-primaryColorLight 
                                     h-10 w-10 lg:h-14 lg:w-14 rounded-full grid place-items-center">
                             <i class="fa-solid fa-envelope"></i>
@@ -658,7 +662,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-4 mb-4">
+                    <div class="contact_item flex items-start gap-4 mb-4">
                         <div class="text-whiteColor bg-gradient-to-b from-primaryColor to-primaryColorLight 
                                     h-10 w-10 lg:h-14 lg:w-14 rounded-full grid place-items-center">
                             <i class="fa-solid fa-location-dot"></i>
@@ -670,7 +674,7 @@
                     </div>
                 </div>
 
-                <form class="flex-1 bg-sectionColor dark:bg-darkSectionColor border border-primaryColor px-5 py-10 rounded-3xl space-y-3">
+                <form class="contact_form flex-1 bg-sectionColor dark:bg-darkSectionColor border border-primaryColor px-5 py-10 rounded-3xl space-y-3">
                     <div class="flex flex-col">
                         <h2 class="subtitle">Let's Work Together!</h2>
                         <p class="max-w-2xl py-3">I create elegantly simple designs and code with 
@@ -762,6 +766,8 @@
                  text-whiteColor z-50 hover:-translate-y-1 ease-in duration-200">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/main.js"></script>
     <script src="./js/projects.js"></script>
 </body>
