@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-sectionColor: hsl(209, 100%, 97%);
+  --color-sectionColor: hsl(0, 0%, 97%);
   --color-darkBodyColor: hsl(216, 100%, 4%);
   --color-darkSectionColor: hsl(211, 100%, 12%);
   --color-primaryColor: hsl(209, 87%, 21%);
@@ -291,5 +291,15 @@
 
   .work_card:hover div i {
     @apply -rotate-90;
+  }
+
+  .exp_edu_card,
+  .exp_edu_card > p {
+    @apply duration-300;
+  }
+
+  .exp_edu_card:hover , 
+  .exp_edu_card:hover > p {
+    @apply text-whiteColor;
   }
 }
