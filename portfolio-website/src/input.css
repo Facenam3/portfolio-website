@@ -48,11 +48,7 @@
 
 @layer components {
   .nav-link {
-  position: relative;
-  font-weight: 700;
-  color: var(--color-primaryColor); /* Light mode text */
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
+    @apply relative font-bold text-textColor lg:text-primaryColor;
   }
 
   html.dark .nav-link {
@@ -72,44 +68,26 @@
     transition: transform 0.5s ease-in-out;
   }
 
+  .active::before,
   .nav-link:hover::before {
     transform: scaleX(1);
     transform-origin: left;
   }
 
   .btn {
-    position: relative;
-    overflow: hidden;
-    padding: 0.75rem 1.75rem;
-    border-radius: 9999px; 
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: var(--color-primaryColor);
-    color: var(--color-whiteColor);
-    transition: color 0.3s ease-in-out;
+    @apply relative overflow-hidden px-7 py-3 rounded-full font-bold flex justify-center items-center 
+           cursor-pointer bg-primaryColor text-whiteColor transition-colors duration-300;
   }
 
-  html.dark .btn {
-    background-color: var(--color-primaryColorLight);
-    color: var(--color-whiteColor);
+  /* Dark mode override */
+  .btn {
+    @apply dark:bg-primaryColorLight dark:text-whiteColor;
   }
 
   .btn::before {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 9999px; 
-    background: linear-gradient(
-      to right,
-      var(--color-primaryColor),
-      var(--color-primaryColorLight)
-    );
+    @apply absolute top-0 left-0 w-full h-full rounded-full;
+    background: linear-gradient(to right, var(--color-primaryColor), var(--color-primaryColorLight));
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-in-out;
@@ -122,10 +100,10 @@
   }
 
   .btn > * {
-    position: relative;
-    z-index: 1; 
+    @apply relative z-[1];
   }
 
+  /* Outline button */
   .btn_outline {
     border: 1px solid var(--color-primaryColorLight);
     color: var(--color-primaryColorLight);
