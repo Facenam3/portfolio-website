@@ -266,14 +266,14 @@
   .indicator {
     transition: left 0.4s;
   }
-
   .work_card > div {
-    @apply duration-500;
+    @apply translate-y-full transition-transform duration-500;
   }
 
   .work_card:hover > div {
-    @apply bottom-0
+    @apply translate-y-0;
   }
+
 
   .work_card div i {
     @apply duration-300 delay-300;
