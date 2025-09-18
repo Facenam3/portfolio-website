@@ -87,10 +87,10 @@ function showProjects(filter = "all") {
                             
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <p class="text-2xl font-bold lg:text-3xl">${project.title}</p>
+                                    <p class="text-sm font-bold lg:text-xl">${project.title}</p>
                                     <p>${project.description}</p>
                                 </div>
-                                <div class="text-2xl rotate-45">
+                                <div class="text-sm rotate-45">
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </div>
                             </div>
